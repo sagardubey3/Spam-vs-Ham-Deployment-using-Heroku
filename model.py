@@ -66,7 +66,7 @@ y = df['v1']
 vectorizer = TfidfVectorizer()
 X = vectorizer.fit_transform(df['Processed'])
 model=MultinomialNB()
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20, random_state=2019)
 model = MultinomialNB()
 model.fit(X_train,y_train)
 model.score(X_test,y_test)
